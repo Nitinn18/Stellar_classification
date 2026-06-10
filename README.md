@@ -59,21 +59,21 @@ During development, a conscious architectural decision was made regarding data s
 The system automatically populates the outputs/ folder with high-contrast, atmospheric visualizations mapped to specific analysis stages:
 
 ●01_class_distribution.png: Highlights the underlying data distribution across classes (Galaxy: 11,860, Star: 4,343, Quasar [QSO]: 3,797).
-
+![Class Distribution](01_class_distribution.png)
 ●02_feature_distributions.png: Overlays density distributions for each of the 8 features across classes.
-
+![Feature Distributions](02_feature_distributions.png)
 ●03_correlation_heatmap.png: Matrix tracking collinearity between the UGRIZ filters.
-
+![Correlation Heatmap](03_correlation_heatmap.png)
 ●04_redshift_boxplot.png: Isolates redshift as the single most critical discriminating metric separating systemic extragalactic features.
-
+![Redshift Boxplot](04_redshift_boxplot.png)
 ### 3.Dimensionality Reduction (PCA)
 
 ●Features are scaled dynamically using a standard scaler before applying projection techniques.
 
 ●05_pca_2d.png: Illustrates a 2-component spatial projection capturing 70.5% of the cumulative variance.
-
+![PCA 2D](05_pca_2d.png)
 ●06_pca_scree.png: Tracks the scree variance cliff and models the component inflection point required to crack the 95% threshold rule.
-
+![PCA Scree](06_pca_scree.png)
 ## Modeling & GridSearch Optimization
 
 The system performs hyperparameter validation over 3 Cross-Validation folds (GridSearchCV) optimized natively for a macro F1 metric:
@@ -96,15 +96,19 @@ The system performs hyperparameter validation over 3 Cross-Validation folds (Gri
 The pipeline saves deep validation artifacts for the championship-tier model:
 
 ●07_confusion_matrix.png : Displays raw counts alongside row-normalized precision matrices to identify class confusion vectors.
+![Confusion Matrix](07_confusion_matrix.png)
 
 ●08_per_class_metrics.png : Side-by-side performance bar graph breakdown highlighting precision, recall, and localized F1 steps.
+![Per Class Metrics](08_per_class_metrics.png)
 
 ●09_roc_curves.png : One-vs-Rest ROC curve chart demonstrating immaculate Area Under the Curve metrics (Star: 0.9996, Galaxy: 0.9930, QSO: 0.9899).
+![ROC Curves](09_roc_curves.png)
 
 ●10_feature_importances.png : Horizontal breakdown mapping variance dependence, confirming redshift as the dominant predictive signal.
+![Feature Importances](10_feature_importances.png)
 
 ●11_model_comparison.png : Macroscopic performance showdown comparing Accuracy, Macro F1, and Area Under the Curve between competing classifiers.
-
+![Model Comparison](11_model_comparison.png)
 
 ## Final Metrics Matrix (XGBoost)
    
