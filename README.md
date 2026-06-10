@@ -18,20 +18,19 @@ The pipeline automatically benchmarks optimized models, selecting **XGBoost** as
 ## Repository Structure
 
 ```text
-├── outputs/
-│   ├── 01_class_distribution.png
-│   ├── 02_feature_distributions.png
-│   ├── 03_correlation_heatmap.png
-│   ├── 04_redshift_boxplot.png
-│   ├── 05_pca_2d.png
-│   ├── 06_pca_scree.png
-│   ├── 07_confusion_matrix.png
-│   ├── 08_per_class_metrics.png
-│   ├── 09_roc_curves.png
-│   ├── 10_feature_importances.png
-│   └── 11_model_comparison.png
-├── Stellar_classification.ipynb   # Main Jupyter Notebook pipeline
-└── requirements.txt               # Dependencies 
+├── 01_class_distribution.png
+├── 02_feature_distributions.png
+├── 03_correlation_heatmap.png
+├── 04_redshift_boxplot.png
+├── 05_pca_2d.png
+├── 06_pca_scree.png
+├── 07_confusion_matrix.png
+├── 08_per_class_metrics.png
+├── 09_roc_curves.png
+├── 10_feature_importances.png
+├── 11_model_comparison.png
+├── Stellar_classification_final.ipynb   # Main Jupyter Notebook pipeline
+└── requirements.txt                     # Dependencies
 ```
 ## Engineering Trade-offs & Optimization
 
